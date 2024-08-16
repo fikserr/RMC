@@ -24,6 +24,12 @@ function Partners() {
       <Container className={styles.partners__container}>
         <h1 className={styles.partners__title}>Наши партнеры</h1>
         <Swiper
+                onBeforeInit={(swiper) => {
+                  swiper.params.navigation.prevEl = prevRef.current;
+                  swiper.params.navigation.nextEl = nextRef.current;
+                  swiper.navigation.init();
+                  swiper.navigation.update();
+                }}
           pagination={{ clickable: true }}
           navigation={{
             prevEl: prevRef.current,

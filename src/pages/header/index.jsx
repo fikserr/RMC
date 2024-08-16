@@ -13,18 +13,17 @@ import Container from "../../layout/container";
 function Header() {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
-
-  useEffect(() => {
-    setTimeout(() => {
-      if (prevRef.current && nextRef.current) {
-        prevRef.current.classList.add("swiper-button-prev");
-        nextRef.current.classList.add("swiper-button-next");
-      }
-    }, 0);
-  }, []);
   return (
     <div className={styles.header}>
       <Swiper
+        onBeforeInit={(swiper) => {
+          swiper.params.navigation.prevEl = prevRef.current;
+          swiper.params.navigation.nextEl = nextRef.current;
+          prevRef.current.classList.add("swiper-button-prev");
+          nextRef.current.classList.add("swiper-button-next");
+          swiper.navigation.init();
+          swiper.navigation.update();
+        }}
         pagination={{ clickable: true }}
         navigation={{
           prevEl: prevRef.current,
@@ -104,8 +103,8 @@ function Header() {
           </Container>
         </SwiperSlide>
         <Container className={styles.header__container}>
-            <div ref={prevRef} className={styles.swiperButtonPrev}></div>
-            <div ref={nextRef} className={styles.swiperButtonNext}></div>
+          <div ref={prevRef} className={styles.swiperButtonPrev}></div>
+          <div ref={nextRef} className={styles.swiperButtonNext}></div>
         </Container>
       </Swiper>
     </div>
