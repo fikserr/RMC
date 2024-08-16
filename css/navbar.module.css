@@ -1,0 +1,123 @@
+.navbar {
+  padding: 20px 0;
+  height: 100px;
+}
+.navbar__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar__logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.navbar__content_title {
+  font-style: "Belleza";
+  font-size: 22px;
+  color: rgb(51, 51, 51);
+  font-weight: 400;
+  line-height: 26px;
+}
+.navbar__content_text {
+  font-style: "Belleza";
+  font-size: 16px;
+  color: rgb(166, 166, 166);
+  line-height: 18px;
+}
+.navbar__links {
+  display: flex;
+  gap: 50px;
+  position: relative;
+}
+.navbar__links_link {
+  font-style: "Jost";
+  color: rgb(51, 51, 51);
+  font-size: 20px;
+  line-height: 29px;
+  text-decoration: none;
+}
+.navbar__links_dropdown {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: none;
+  background: transparent;
+  font-style: "Jost";
+  color: rgb(51, 51, 51);
+  font-size: 20px;
+  line-height: 29px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.navbar__links_dropdown.active {
+  color: rgb(225, 175, 147);
+}
+.navbar__links_dropdown.active span {
+  transform: rotate(0deg);
+}
+.navbar__links_dropdown span {
+  transform: rotate(180deg);
+}
+.navbar__dropdown {
+  position: absolute;
+  top: 32px;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  width: 350px;
+  height: 188px;
+  z-index: 5;
+  background: white;
+}
+.navbar__dropdown.active {
+  display: flex;
+}
+.navbar__dropdown_link {
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  height: 47px;
+  border-bottom: 1px solid rgb(234, 234, 234);
+  font-style: "Jost";
+  color: rgb(51, 51, 51);
+  font-size: 20px;
+  line-height: 29px;
+  text-decoration: none;
+  transition: 0.5s;
+}
+.navbar__dropdown_link:hover {
+  color: rgb(225, 175, 147);
+  background: rgb(252, 247, 244);
+}
+.navbar__buttons {
+  display: flex;
+  gap: 12px;
+}
+.navbar__btn, .navbar__language {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid rgb(234, 234, 234);
+  font-style: "Jost";
+  font-size: 20px;
+  line-height: 29px;
+  color: rgb(51, 51, 51);
+  transition: 0.5s;
+}
+.navbar__btn:hover, .navbar__language:hover {
+  background: black;
+  color: white;
+}
+.navbar__btn:hover path, .navbar__language:hover path {
+  stroke: white;
+}
+.navbar__language {
+  width: 79px;
+  border-radius: 100px;
+}/*# sourceMappingURL=navbar.module.css.map */

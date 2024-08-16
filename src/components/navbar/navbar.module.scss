@@ -1,0 +1,109 @@
+.navbar {
+  padding: 20px 0;
+  height: 100px;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  &__links {
+    display: flex;
+    gap: 50px;
+    position: relative;
+    &_link {
+      font-family: "Jost";
+      color: rgba(51, 51, 51, 1);
+      font-size: 20px;
+      line-height: 29px;
+      text-decoration: none;
+    }
+    &_dropdown {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border: none;
+      background: transparent;
+      font-family: "Jost";
+      color: rgba(51, 51, 51, 1);
+      font-size: 20px;
+      line-height: 29px;
+      cursor: pointer;
+      transition: 0.5s;
+      &.active {
+        color: rgba(225, 175, 147, 1);
+        & span {
+          transform: rotate(0deg);
+        }
+      }
+      & span {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__dropdown {
+    position: absolute;
+    top: 32px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    width: 350px;
+    height: 188px;
+    z-index: 5;
+    background: white;
+    &.active {
+      display: flex;
+    }
+    &_link {
+      display: flex;
+      align-items: center;
+      padding: 0 16px;
+      height: 47px;
+      border-bottom: 1px solid rgba(234, 234, 234, 1);
+      font-family: "Jost";
+      color: rgba(51, 51, 51, 1);
+      font-size: 20px;
+      line-height: 29px;
+      text-decoration: none;
+      transition: 0.5s;
+      &:hover {
+        color: rgba(225, 175, 147, 1);
+        background: rgba(252, 247, 244, 1);
+      }
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 12px;
+  }
+  &__btn,
+  &__language {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid rgba(234, 234, 234, 1);
+    font-family: "Jost";
+    font-size: 20px;
+    line-height: 29px;
+    color: rgba(51, 51, 51, 1);
+    transition: 0.5s;
+    &:hover {
+      background: black;
+      color: white;
+      & path {
+        stroke: white;
+      }
+    }
+  }
+  &__language {
+    width: 79px;
+    border-radius: 100px;
+  }
+}
