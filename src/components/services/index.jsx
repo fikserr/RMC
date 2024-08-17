@@ -12,6 +12,7 @@ function Services() {
         <p className={styles.services__text}>
           Мы предлагаем широкий спектр услуг для наших клиентов
         </p>
+        <div className={styles.services__scroll}>
         <div className={styles.services__cards}>
           <div className={styles.services__cardBig}>
             <h5 className={styles.services__cardBig_title}>Оценка недвижимости</h5>
@@ -72,6 +73,7 @@ function Services() {
             </h5>
             <img src={grass} alt="image" className={styles.services__card_image} />
           </div>
+        </div>
         </div>
       </Container>
     </div>

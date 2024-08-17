@@ -12,7 +12,7 @@
     }
     &__title{
         color: white;
-        width: 600px;
+        width: 35%;
         font-family: 'Jost';
         font-weight: 500;
         font-size: 80px;
@@ -68,12 +68,51 @@
       --swiper-navigation-size: 20px;
     }
     .swiperButtonPrev {
-      left: 1300px;
-    }
+        right: 10%;
+      }
     
     
 }
+@media screen and (max-width:768px) {
+    .header{
+        height: 924px;
+        &__title{
+            font-size: 65px;
+        }
+        &__infoBtn{
+            font-size: 20px;
+        }
+        &__infoBtn{
+                display: none;
+        }
 
+        .swiperButtonPrev,
+    .swiperButtonNext {
+      top: -20%;
+    }
+    .swiperButtonPrev {
+      right: 20%;
+    }
+    .swiperButtonNext{
+        margin-right: 20px;
+    }
+    }
+}
+@media screen and (max-width:568px) {
+    .header{
+        height: 924px;
+        &__title{
+            font-size: 35px;
+            line-height: 24px;
+        }
+        &__infoBtn{
+            font-size: 16px;
+        }
+        &__infoBtn{
+                display: none;
+        }
+    }
+}
 
 
 

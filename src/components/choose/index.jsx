@@ -3,7 +3,9 @@ import chooseImg from "../../images/chooseImg1.jpeg";
 import chooseImgTwo from "../../images/chooseImg2.jpeg";
 import chooseImgThree from "../../images/chooseImg3.jpeg";
 import chooseImgFour from "../../images/chooseImg4.jpeg";
+import chooseImgFive from "../../images/chooseImg5.png";
 import styles from "./choose.module.scss";
+import classNames from "classnames";
 
 function Choose() {
   return (
@@ -27,6 +29,9 @@ function Choose() {
           <div className={styles.choose__card}>
             <img src={chooseImg} alt="" className={styles.choose__card_img} />
           </div>
+          <div className={classNames(styles.choose__card,styles.grid4)}>
+            <img src={chooseImgTwo} alt="" className={styles.choose__card_img} />
+          </div>
           <div className={styles.choose__card}>
             <div className={styles.choose__card_content}>
               <h5 className={styles.choose__card_title}>
@@ -40,7 +45,7 @@ function Choose() {
 
 
           
-          <div className={styles.choose__card}>
+          <div className={classNames(styles.choose__card,styles.grid5)}>
             <img src={chooseImgTwo} alt="" className={styles.choose__card_img} />
           </div>
           <div className={styles.choose__card}>
@@ -58,6 +63,9 @@ function Choose() {
           </div>
 
 
+          <div className={classNames(styles.choose__card,styles.grid4)}>
+            <img src={chooseImgFour} alt="" className={styles.choose__card_img} />
+          </div>
 
           <div className={styles.choose__card}>
             <div className={styles.choose__card_content}>
@@ -70,7 +78,7 @@ function Choose() {
             </div>
           </div>
 
-          <div className={styles.choose__card}>
+          <div className={classNames(styles.choose__card,styles.grid5)}>
             <img src={chooseImgFour} alt="" className={styles.choose__card_img} />
           </div>
 
@@ -83,6 +91,9 @@ function Choose() {
               Полный спектр услуг, включающий аренду, куплю-продажу, управление и инвестиции в недвижимость.
               </p>
             </div>
+          </div>
+          <div className={classNames(styles.choose__card,styles.grid4)}>
+            <img src={chooseImgFive} alt="" className={styles.choose__card_img} />
           </div>
         </div>
       </Container>

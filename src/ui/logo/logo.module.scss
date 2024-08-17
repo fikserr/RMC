@@ -19,3 +19,18 @@
     }
 }
 }
+
+@media screen and (max-width:568px) {
+  .logo {
+  &__content {
+    &_title {
+
+      font-size: 18px;
+
+    }
+    &_text {
+      font-size: 12px;
+    }
+}
+}
+}

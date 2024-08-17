@@ -1,6 +1,5 @@
 .company{
     margin: 250px 0;
-    height: 800px;
     &__container{
         display: flex;
         flex-direction: column;
@@ -37,4 +36,58 @@
         object-position: center;
         height: 500px;
     }
+}
+
+@media screen and (max-width:768px) {
+    .company{
+        margin: 200px 0;
+
+        &__container{
+            display: flex;
+            flex-direction: column;
+        }
+        &__content{
+            flex-wrap: wrap;
+        }
+        &__title{
+            padding-bottom: 30px;
+            font-size: 45px;
+        }
+        &__text1,&__text2{
+            width: 360px;
+            padding-bottom: 20px;
+        }
+        &__text2{
+
+            width: 345px;
+        }
+        &__image{
+            height: 400px;
+        }
+    }
+
+}
+
+@media screen and (max-width:568px) {
+    .company{
+        margin: 180px 0;
+        &__content{
+            flex-wrap: wrap;
+        }
+        &__title{
+            padding-bottom: 20px;
+            font-size: 30px;
+        }
+        &__text1,&__text2{
+            width: 360px;
+            padding-bottom: 16px;
+        }
+        &__text2{
+            width: 345px;
+        }
+        &__image{
+            height: 250px;
+        }
+    }
+
 }
